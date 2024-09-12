@@ -15,7 +15,7 @@ st.title('Used Car Price Prediction')
 st.header("Enter Car Details")
 
 # Load example data to extract options
-df = pd.read_csv('fin-app.csv', encoding='latin1')
+df = pd.read_csv('final-streamlit(non-dup).csv', encoding='latin1')
 
 df.drop_duplicates(inplace=True)
 
