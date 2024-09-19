@@ -2,3 +2,5 @@ streamlit
 pandas
 scikit-learn
 category-encoders
+Flask
+jsonify
