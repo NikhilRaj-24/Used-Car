@@ -8,6 +8,20 @@ from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score
 
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/status', methods=['GET'])
+def status():
+    return jsonify({
+        "message": "The server is running.",
+        "status": "success"
+    })
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
+
 # Streamlit app
 st.title('Used Car Price Prediction')
 
